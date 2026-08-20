@@ -1,0 +1,14 @@
+services:
+    postgres:
+        image: postgres:18
+        container_name: co-linear-postgres
+        environment:
+            POSTGRES_DB: co-linear
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+        volumes:
+            - postgres_data:/var/lib/postgresql
+        ports:
+            - '5435:5432'
+volumes:
+    postgres_data:
